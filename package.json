@@ -1,11 +1,13 @@
 {
   "name": "piiito-joker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "example",
   "main": "src/index.js",
   "scripts": {
-    "test": "node js/joker.js",
-    "format": "prettier -w js/joker.js"
+    "test": "node js/jokertest.js",
+    "format": "prettier -w **/*.js",
+    "lint": "eslint **/*.js",
+    "lint-fix": "eslint **/*.js --cache --fix"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   "homepage": "https://github.com/piiito/joker#readme",
   "type": "module",
   "devDependencies": {
+    "eslint": "^8.27.0",
     "prettier": "^2.7.1"
   },
   "dependencies": {
