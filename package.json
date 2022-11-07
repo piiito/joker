@@ -40,7 +40,6 @@
     "*.js": [
       "prettier --write",
       "eslint --fix"
-      
     ],
     "*.html": [
       "prettier --write"
