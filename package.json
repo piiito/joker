@@ -1,6 +1,6 @@
 {
   "name": "piiito-joker",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "example",
   "main": "src/index.js",
   "scripts": {
