@@ -1,13 +1,14 @@
 {
   "name": "piiito-joker",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "example",
   "main": "src/index.js",
   "scripts": {
     "test": "node js/jokertest.js",
     "format": "prettier -w **/*.js",
     "lint": "eslint **/*.js",
-    "lint-fix": "eslint **/*.js --cache --fix"
+    "lint-fix": "eslint **/*.js --cache --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
   "type": "module",
   "devDependencies": {
     "eslint": "^8.27.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
   "dependencies": {
@@ -32,5 +35,17 @@
     "give-me-a-joke": "^0.5.1",
     "joker": "^0.9.0",
     "piiito-joker": "^0.1.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
   }
 }
